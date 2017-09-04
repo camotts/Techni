@@ -1,4 +1,4 @@
-package com.orbiter.techni.blocks;
+package com.orbiter.techni.blocks.Counter;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;

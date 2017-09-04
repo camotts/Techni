@@ -1,4 +1,4 @@
-package com.orbiter.techni;
+package com.orbiter.techni.items;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;

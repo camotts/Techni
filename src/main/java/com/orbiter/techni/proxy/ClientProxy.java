@@ -1,7 +1,6 @@
 package com.orbiter.techni.proxy;
 
-import com.orbiter.techni.ModBlocks;
-import com.orbiter.techni.ModItems;
+import com.orbiter.techni.blocks.ModBlocks;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;

@@ -1,8 +1,8 @@
-package com.orbiter.techni;
+package com.orbiter.techni.blocks;
 
-import com.orbiter.techni.blocks.Counter;
+import com.orbiter.techni.blocks.Counter.Counter;
 import com.orbiter.techni.blocks.Generator;
-import com.orbiter.techni.blocks.Timer;
+import com.orbiter.techni.blocks.Timer.Timer;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;

@@ -1,4 +1,4 @@
-package com.orbiter.techni.blocks;
+package com.orbiter.techni.blocks.Timer;
 
 import com.orbiter.techni.Reference;
 import net.minecraft.block.Block;

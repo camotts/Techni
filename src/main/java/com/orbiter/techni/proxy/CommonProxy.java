@@ -1,10 +1,13 @@
 package com.orbiter.techni.proxy;
 
 import com.orbiter.techni.Config;
-import com.orbiter.techni.ModBlocks;
+import com.orbiter.techni.blocks.ModBlocks;
 import com.orbiter.techni.Reference;
-import com.orbiter.techni.Techni;
 import com.orbiter.techni.blocks.*;
+import com.orbiter.techni.blocks.Counter.Counter;
+import com.orbiter.techni.blocks.Counter.CounterTileEntity;
+import com.orbiter.techni.blocks.Timer.Timer;
+import com.orbiter.techni.blocks.Timer.TimerTileEntity;
 import com.orbiter.techni.items.EnrichedIron;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -17,7 +20,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import org.apache.logging.log4j.Level;
 
 import java.io.File;
 

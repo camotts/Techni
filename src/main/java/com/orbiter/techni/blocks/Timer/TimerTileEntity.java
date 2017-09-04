@@ -1,4 +1,4 @@
-package com.orbiter.techni.blocks;
+package com.orbiter.techni.blocks.Timer;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.tileentity.TileEntity;
