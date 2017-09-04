@@ -33,4 +33,8 @@ public class CounterTileEntity extends TileEntity {
         compound.setInteger("counter", counter);
         return compound;
     }
+
+    public int getCounter() {
+        return counter;
+    }
 }

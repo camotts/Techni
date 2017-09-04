@@ -8,6 +8,7 @@ import com.orbiter.techni.blocks.Counter.Counter;
 import com.orbiter.techni.blocks.Counter.CounterTileEntity;
 import com.orbiter.techni.blocks.Timer.Timer;
 import com.orbiter.techni.blocks.Timer.TimerTileEntity;
+import com.orbiter.techni.compatability.CompatabilityHandler;
 import com.orbiter.techni.items.EnrichedIron;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -35,6 +36,8 @@ public class CommonProxy {
         File directory = e.getModConfigurationDirectory();
         config = new Configuration(new File(directory.getPath(), "techni.cfg"));
         Config.readConfig();
+
+        CompatabilityHandler.registerTOP();
     }
 
     public void init(FMLInitializationEvent e) {

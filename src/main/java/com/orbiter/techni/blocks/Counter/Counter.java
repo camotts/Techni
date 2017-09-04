@@ -1,6 +1,10 @@
 package com.orbiter.techni.blocks.Counter;
 
 import com.orbiter.techni.Reference;
+import com.orbiter.techni.compatability.probe.TOPInfoProvider;
+import mcjty.theoneprobe.api.IProbeHitData;
+import mcjty.theoneprobe.api.IProbeInfo;
+import mcjty.theoneprobe.api.ProbeMode;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -10,6 +14,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -26,7 +31,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  * Created by Cam on 9/3/2017.
  */
-public class Counter extends Block implements ITileEntityProvider{
+public class Counter extends Block implements ITileEntityProvider, TOPInfoProvider{
     public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
     public Counter() {
@@ -87,5 +92,21 @@ public class Counter extends Block implements ITileEntityProvider{
     @Override
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, FACING);
+    }
+
+    @Override
+    public void addProbeInfo(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world, IBlockState blockState, IProbeHitData data) {
+        TileEntity te = world.getTileEntity(data.getPos());
+        if (te instanceof CounterTileEntity) {
+            CounterTileEntity counterTileEntity = (CounterTileEntity) te;
+            probeInfo.horizontal()
+                    .item(new ItemStack(Items.CLOCK))
+                    .text(TextFormatting.GREEN + "Counter: " + counterTileEntity.getCounter());
+            // Then add another line with a border. Inside the border there will be a horse and the counter shown as a progress bar
+            probeInfo.horizontal(probeInfo.defaultLayoutStyle().borderColor(0xffff0000))
+                    .entity("minecraft:horse")
+                    .progress(counterTileEntity.getCounter() % 100, 100, probeInfo.defaultProgressStyle().suffix("%"));
+        }
+
     }
 }
