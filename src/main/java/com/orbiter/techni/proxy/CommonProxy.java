@@ -4,9 +4,7 @@ import com.orbiter.techni.Config;
 import com.orbiter.techni.ModBlocks;
 import com.orbiter.techni.Reference;
 import com.orbiter.techni.Techni;
-import com.orbiter.techni.blocks.Counter;
-import com.orbiter.techni.blocks.CounterTileEntity;
-import com.orbiter.techni.blocks.Generator;
+import com.orbiter.techni.blocks.*;
 import com.orbiter.techni.items.EnrichedIron;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -52,6 +50,9 @@ public class CommonProxy {
 
         event.getRegistry().register(new Counter());
         GameRegistry.registerTileEntity(CounterTileEntity.class, Reference.MODID + ".counter");
+
+        event.getRegistry().register(new Timer());
+        GameRegistry.registerTileEntity(TimerTileEntity.class, Reference.MODID+".timer");
     }
 
     @SubscribeEvent
@@ -60,5 +61,6 @@ public class CommonProxy {
 
         event.getRegistry().register(new ItemBlock(ModBlocks.generator).setRegistryName(ModBlocks.generator.getRegistryName()));
         event.getRegistry().register(new ItemBlock(ModBlocks.counter).setRegistryName(ModBlocks.counter.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(ModBlocks.timer).setRegistryName(ModBlocks.timer.getRegistryName()));
     }
 }

@@ -2,6 +2,7 @@ package com.orbiter.techni;
 
 import com.orbiter.techni.blocks.Counter;
 import com.orbiter.techni.blocks.Generator;
+import com.orbiter.techni.blocks.Timer;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -17,8 +18,12 @@ public class ModBlocks {
     @GameRegistry.ObjectHolder("techni:counter")
     public static Counter counter;
 
+    @GameRegistry.ObjectHolder("techni:timer")
+    public static Timer timer;
+
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         //counter.initModel();
+        timer.initModel();
     }
 }

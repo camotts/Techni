@@ -1,0 +1,21 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "techni:timer",
+    "textures": {
+      "txt": "techni:blocks/timer"
+    }
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}],
+    "lit": {
+      "false": {},
+      "true": {
+        "textures": {
+          "txt": "techni:blocks/timer_on"
+        }
+      }
+    }
+  }
+}
