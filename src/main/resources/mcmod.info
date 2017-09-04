@@ -1,0 +1,16 @@
+[
+{
+  "modid": "modtechni",
+  "name": "Techni",
+  "description": "Example placeholder mod.",
+  "version": "0.0.1",
+  "mcversion": "1.12.1",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Cameron (Orbiter)"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
