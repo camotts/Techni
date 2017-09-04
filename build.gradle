@@ -11,9 +11,9 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'maven'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 repositories {
-    maven { // The repo from which to get waila
-        name "Mobius Repo"
-        url "http://tehnut.info/maven"
+    maven { // TOP
+        name 'tterrag maven'
+        url "http://maven.tterrag.com/"
     }
 }
 
@@ -61,7 +61,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-    deobfCompile "mcp.mobius.waila:Hwyla:1.8.18-B32_1.12:api"
+    deobfCompile "mcjty.theoneprobe:TheOneProbe-1.12:1.12-1.4.14-7"
 }
 
 processResources {
